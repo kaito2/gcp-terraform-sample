@@ -6,13 +6,11 @@ module "gke" {
   ip_range_pods         = local.ip_range_pods_name
   ip_range_services     = local.ip_range_services_name
   name                  = "minimum-public-cluster-${var.env}"
-  # Implies a dependency on the network module.
-  network = module.vpc.network_name
+  network               = module.vpc.network_name
   node_pools = [
     {
       machine_type = "n2-standard-2"
       name         = "default-node-pool"
-      // preemptible  = true
     }
   ]
   project_id               = var.project_id
