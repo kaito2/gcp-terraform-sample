@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
-    # tf-state-${GCP_PROJECT_ID}
-    bucket = "tf-state-sample-project-prod"
+    # tfstate-${GCP_PROJECT_ID}
+    bucket = "tfstate-sample-project-prod"
   }
 }
 

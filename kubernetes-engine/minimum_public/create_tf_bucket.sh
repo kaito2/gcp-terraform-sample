@@ -10,4 +10,4 @@ fi
 
 readonly GCP_PROJECT=$1
 
-gsutil mb -p "${GCP_PROJECT}" -c multi_regional -l asia "gs://tf-state-${GCP_PROJECT}/"
+gsutil mb -p "${GCP_PROJECT}" -c multi_regional -l asia "gs://tfstate-${GCP_PROJECT}/"
